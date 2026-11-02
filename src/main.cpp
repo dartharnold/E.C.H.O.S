@@ -214,7 +214,7 @@ void loop() {
 
         // Swapped mapping: Z governs horizontal, Y governs vertical
         float axis_horizontal = -(event.acceleration.z - base_z);
-        float axis_vertical   =  (event.acceleration.y - base_y);
+        float axis_vertical   =  -(event.acceleration.y - base_y);
 
         float target_x = constrain(axis_horizontal * 4.5f, -22.0f, 22.0f);
         float target_y = constrain(axis_vertical   * 3.0f, -12.0f, 12.0f);
